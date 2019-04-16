@@ -4,21 +4,20 @@ import numpy as np
 
 class QuotesSpider(scrapy.Spider):
     name = "adresses"
-   
+    
+
+    # Variable d'initialisation
     nbServices = 3
     nbPage = 1
-    nbAdress = 5
+    nbAdressByPage = 5
     
 
     adressDictionnary = { 'adresses' : [] }
     adressTab = [] 
 
-    page = range(1,2)  # => [1,2]
+    page = range(1,(nbPage+1))  # 1 page 
 
     def start_requests(self):
-        urls = [
-            'https://www.walletexplorer.com'
-        ]
         with open('services.json') as file :
             data = json.load(file)
             for value in np.array(data['liens'][0:self.nbServices]) :
@@ -30,7 +29,7 @@ class QuotesSpider(scrapy.Spider):
     def scrapAdress(self,response):
         service = response.meta['service']
         
-        for adresse in np.array(response.xpath("//td/a/@href").re(r'[13][a-km-zA-HJ-NP-Z1-9]{25,34}')[0:self.nbAdress]):    
+        for adresse in np.array(response.xpath("//td/a/@href").re(r'[13][a-km-zA-HJ-NP-Z1-9]{25,34}')[0:self.nbAdressByPage]):    
             yield { 
                 service: adresse
             }
