@@ -32,7 +32,7 @@
 
 * <code>git clone https://forge.univ-lyon1.fr/p1410541/walletexplorer2</code>
 
-* <code>cd walletexplorer2/tutorial2/tutorial2</code> 
+* <code>cd walletexplorer2/tutorial2</code> 
 
 * <code>scrapy crawl services</code>
 
