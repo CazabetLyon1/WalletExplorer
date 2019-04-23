@@ -63,10 +63,10 @@ class QuotesSpider(scrapy.Spider):
         #for adresse in np.array(response.xpath("//td/a/@href").re(r'[13][a-km-zA-HJ-NP-Z1-9]{25,34}')[0:self.nbAdressByPage]):
         for adresse in np.array(response.xpath("//td/a/@href").re(r'[13][a-km-zA-HJ-NP-Z1-9]{25,34}')[0:int(nbadressesbypage)]):    
             yield { 
-                service: adresse
+                'service' : service, 'adresse' : adresse , 'service' : service, 'page' : page
             }
-            self.adressDictionnary['adresses'].append( { adresse : service, 'page' : page } )
-            self.adressTab.append( {'adresse': adresse, 'page' : page } )
+            self.adressDictionnary['adresses'].append( { 'service' : service, adresse : service, 'page' : page } )
+            self.adressTab.append( {'service' : service, 'adresse': adresse, 'page' : page } )
             
         jsonObject = json.dumps(self.adressDictionnary)
         f = open("adresses.json","w")

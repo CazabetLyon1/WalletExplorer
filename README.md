@@ -52,7 +52,7 @@
 * <code> scrapy crawl adresses -a p=nbPageToScrap -a a=nbAdressesParPage -a s=nbServices </code>
 
     ou 
-* <code> scrapy runspider spiders/adressesSpider.py -o adresses2.json -a p=nbPageToScrap -a a=nbAdressesParPage -a s=nbServices</code> 
+* <code> scrapy runspider spiders/adressesSpider.py -o adresses2.json -a p=1 -a a=10 -a s=10</code> 
 
 * Par défaut : p = 1, a = 2, s=3.
 
