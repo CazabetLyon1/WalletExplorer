@@ -40,9 +40,19 @@
 
 * <code>scrapy crawl adresses</code> 
 
+    ou 
+
+* <code> scrapy runspider spiders/adressesSpider.py -o adresses2.json </code> 
+
+    Soyez sur que le fichier "adresses2.json" n'existe pas si tel est le cas. s'il existe éxécutez la commande suivante : 
+* <code>sudo rm adresses2.json </code>
+
 ## Arguments parse
 
 * <code> scrapy crawl adresses -a p=nbPageToScrap -a a=nbAdressesParPage -a s=nbServices </code>
+
+    ou 
+* <code> scrapy runspider spiders/adressesSpider.py -o adresses2.json -a p=nbPageToScrap -a a=nbAdressesParPage -a s=nbServices</code> 
 
 * Par défaut : p = 1, a = 2, s=3.
 
