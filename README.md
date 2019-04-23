@@ -42,7 +42,7 @@
 
 * <code> scrapy crawl adresses -a p=nbPageToScrap -a a=nbAdressesParPage -a s=nbServices </code>
 
-* /!\ Par défault : p = 1, a = 2, s=3.
+* Par défault : p = 1, a = 2, s=3.
 
 
 * La dernière commande va extraire les données et créer des fichers json suivants :  
