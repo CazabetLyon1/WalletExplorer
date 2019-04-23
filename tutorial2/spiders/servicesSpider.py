@@ -5,7 +5,6 @@ class QuotesSpider(scrapy.Spider):
     name = "services"
     walletUrl = 'https://www.walletexplorer.com/wallet/Bittrex.com/addresses'
     baseUrl = 'https://www.walletexplorer.com'
-    
     hrefTab = []
     hrefDictionnary = { 'liens' : []}
     adressDictionnary = { 'adresses' : [] }
