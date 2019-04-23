@@ -15,9 +15,9 @@
 ## Required 
 
 
-* python : <code>sudo apt-get install python</code>
+* python : <code>sudo apt-get install python3</code>
 
-* scrapy : <code>sudo pip install scrapy</code>
+* scrapy : <code>sudo pip3 install scrapy</code>
 
 
 ## Objectif
@@ -26,32 +26,30 @@
 * Associer les adresses bitcoins a des noms de service et leurs catégories
 
 
-## Avancement
-
-
-* Possibilité de récupérer toutes les adresses bitcoin de la premiere page de chaque service
-
 
 ## How to 
 
 
-* <code>git clone https://forge.univ-lyon1.fr/p1410541/walletexplorer</code>
+* <code>git clone https://forge.univ-lyon1.fr/p1410541/walletexplorer2</code>
 
-* <code>cd walletexplorer/tutorial/tutorial</code> 
+* <code>cd walletexplorer2/tutorial2/tutorial2</code> 
 
 * <code>scrapy crawl services</code>
 
 * <code>scrapy crawl adresses</code> 
+
+## Arguments parse
+
+* <code> scrapy crawl adresses -a p=nbPageToScrap -a a=nbAdressesParPage -a s=nbServices </code>
+
+* /!\ Par défault : p = 1, a = 2, s=3.
 
 
 * La dernière commande va extraire les données et créer des fichers json suivants :  
     * services.json : regroupe les liens des différents ressources URI du site
     * adresses.json : regroupe les adresses associés aux services bitcoin
 
-## Remarque 
 
-* Le framework scrapy s'éxécute de manière asynchrone, c'est à dire que l'ordre des requêtes dans laquelles elles sont écrites n'est pas forcément respecté lors de l'envoie.
-* Comme il est nécéssaire de d'abord récupérer les liens de chaque service avant de récupérer les adresses, il se peut que vous deviez répéter la derniere commande deux fois.
 
 
 
