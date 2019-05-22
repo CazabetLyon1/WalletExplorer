@@ -54,7 +54,10 @@
     ou 
 * <code> scrapy runspider spiders/adressesSpider.py -o adresses2.json -a p=1 -a a=10 -a s=10</code> 
 
-* Par défaut : p = 1, a = 2, s=3.
+* Par défaut : 
+    *-Nombre de page, p = 1
+    *-Nomdre d'addresses a = 2
+    *-Nombre de services s=3
 
 
 * La dernière commande va extraire les données et créer des fichers json suivants :  
