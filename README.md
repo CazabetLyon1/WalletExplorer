@@ -44,7 +44,7 @@
 
 * <code> scrapy runspider spiders/adressesSpider.py -o adresses2.json </code> 
 
-    Soyez sur que le fichier "adresses2.json" n'existe pas si tel est le cas. s'il existe éxécutez la commande suivante : 
+    Soyez sur que le fichier "adresses2.json" n'existe pas. S'il existe éxécutez la commande suivante : 
 * <code>sudo rm adresses2.json </code>
 
 ## Arguments parse
